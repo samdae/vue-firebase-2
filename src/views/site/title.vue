@@ -14,7 +14,7 @@ template 안의 태그는 하나가 있어야 한다.
         <v-card-title>
           제목 수정
           <v-spacer/>
-          <v-btn icon @click="save=false"><v-icon>mdi-content-save</v-icon></v-btn>
+          <v-btn icon @click="save"><v-icon>mdi-content-save</v-icon></v-btn>
           <v-btn icon @click="dialog=false"><v-icon>mdi-close</v-icon></v-btn>
         </v-card-title>
         <v-card-text>
@@ -32,6 +32,7 @@ template 안의 태그는 하나가 있어야 한다.
 </template>
 
 <script>
+
 export default {
   props: ['title'],
   data () {
@@ -46,9 +47,7 @@ export default {
     },
     async save () {
       try {
-        await this.$firebase.database().ref().child('site').update({ title: this.text })
-      } catch (e) {
-        console.log(e.message)
+        await this.$firebase.database().ref().child('site').update({ title: this.text }, 1000)
       } finally {
         this.dialog = false
       }

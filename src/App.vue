@@ -1,4 +1,5 @@
 <template>
+<v-main>
   <v-app>
     <v-app-bar
       app
@@ -23,6 +24,7 @@
     </v-content>
     <site-footer :footer="site.footer"/>
   </v-app>
+</v-main>
 </template>
 
 <script>

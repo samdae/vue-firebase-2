@@ -3,7 +3,7 @@
   <v-footer app color="primary" dark absolute :footer="footer">
     <v-spacer/>
     <div> {{ new Date().getFullYear() + ' ' + footer }} </div>
-      {{ title }}
+
       <v-btn icon @click="openDialog">
         <v-icon>mdi-grease-pencil</v-icon>
       </v-btn>
