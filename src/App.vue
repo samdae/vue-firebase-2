@@ -16,7 +16,7 @@
         <v-icon>mdi-heart</v-icon>
       </v-btn>
   </v-app-bar>
-    <v-navigation-drawer app v-model="drawer">
+    <v-navigation-drawer app v-model="drawer" width="400">
       <site-menu :items="site.menu" />
     </v-navigation-drawer>
     <v-content>
