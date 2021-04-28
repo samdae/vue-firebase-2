@@ -32,7 +32,6 @@ template 안의 태그는 하나가 있어야 한다.
 </template>
 
 <script>
-
 export default {
   props: ['title'],
   data () {
